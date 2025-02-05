@@ -1,0 +1,861 @@
+{
+  "$schema": "https://github.com/lppedd/idea-conventional-commit/raw/master/src/main/resources/defaults/conventionalcommit.schema.json",
+  "types": {
+    "refactor": {
+      "description": "버그 수정이나 새로운 기능 추가 없이 코드 개선",
+      "scopes": {
+        "core": {
+          "description": "프로젝트 핵심 기능"
+        },
+        "deps": {
+          "description": "종속성 변경"
+        },
+        "config": {
+          "description": "구성 파일 및 환경 설정"
+        },
+        "build": {
+          "description": "빌드 관련 변경사항"
+        },
+        "api": {
+          "description": "API 변경사항"
+        },
+        "ui": {
+          "description": "사용자 인터페이스 변경사항"
+        },
+        "auth": {
+          "description": "인증 및 권한 관련 변경사항"
+        },
+        "db": {
+          "description": "데이터베이스 관련 변경사항"
+        },
+        "test": {
+          "description": "테스트 관련 변경사항"
+        },
+        "docs": {
+          "description": "문서 관련 변경사항"
+        },
+        "style": {
+          "description": "코드 스타일 및 포맷팅"
+        },
+        "components": {
+          "description": "컴포넌트 변경사항"
+        },
+        "utils": {
+          "description": "유틸리티 변경사항"
+        },
+        "types": {
+          "description": "타입 정의 변경사항"
+        },
+        "hooks": {
+          "description": "훅 변경사항"
+        },
+        "store": {
+          "description": "상태 관리 변경사항"
+        },
+        "lib": {
+          "description": "내부 라이브러리 변경사항"
+        },
+        "ci": {
+          "description": "CI 관련 변경사항"
+        },
+        "docker": {
+          "description": "Docker 관련 변경사항"
+        },
+        "k8s": {
+          "description": "쿠버네티스 관련 변경사항"
+        },
+        "i18n": {
+          "description": "국제화/현지화 변경사항"
+        },
+        "security": {
+          "description": "보안 관련 변경사항"
+        },
+        "perf": {
+          "description": "성능 최적화 변경사항"
+        },
+        "release": {
+          "description": "릴리즈 및 버전 관련 변경사항"
+        },
+        "chore": {
+          "description": "기타 유지보수 작업"
+        }
+      }
+    },
+    "fix": {
+      "description": "버그를 패치하는 변경사항",
+      "scopes": {
+        "core": {
+          "description": "프로젝트 핵심 기능"
+        },
+        "deps": {
+          "description": "종속성 변경"
+        },
+        "config": {
+          "description": "구성 파일 및 환경 설정"
+        },
+        "build": {
+          "description": "빌드 관련 변경사항"
+        },
+        "api": {
+          "description": "API 변경사항"
+        },
+        "ui": {
+          "description": "사용자 인터페이스 변경사항"
+        },
+        "auth": {
+          "description": "인증 및 권한 관련 변경사항"
+        },
+        "db": {
+          "description": "데이터베이스 관련 변경사항"
+        },
+        "test": {
+          "description": "테스트 관련 변경사항"
+        },
+        "docs": {
+          "description": "문서 관련 변경사항"
+        },
+        "style": {
+          "description": "코드 스타일 및 포맷팅"
+        },
+        "components": {
+          "description": "컴포넌트 변경사항"
+        },
+        "utils": {
+          "description": "유틸리티 변경사항"
+        },
+        "types": {
+          "description": "타입 정의 변경사항"
+        },
+        "hooks": {
+          "description": "훅 변경사항"
+        },
+        "store": {
+          "description": "상태 관리 변경사항"
+        },
+        "lib": {
+          "description": "내부 라이브러리 변경사항"
+        },
+        "ci": {
+          "description": "CI 관련 변경사항"
+        },
+        "docker": {
+          "description": "Docker 관련 변경사항"
+        },
+        "k8s": {
+          "description": "쿠버네티스 관련 변경사항"
+        },
+        "i18n": {
+          "description": "국제화/현지화 변경사항"
+        },
+        "security": {
+          "description": "보안 관련 변경사항"
+        },
+        "perf": {
+          "description": "성능 최적화 변경사항"
+        },
+        "release": {
+          "description": "릴리즈 및 버전 관련 변경사항"
+        },
+        "chore": {
+          "description": "기타 유지보수 작업"
+        }
+      }
+    },
+    "feat": {
+      "description": "새로운 기능을 도입하는 변경사항",
+      "scopes": {
+        "core": {
+          "description": "프로젝트 핵심 기능"
+        },
+        "deps": {
+          "description": "종속성 변경"
+        },
+        "config": {
+          "description": "구성 파일 및 환경 설정"
+        },
+        "build": {
+          "description": "빌드 관련 변경사항"
+        },
+        "api": {
+          "description": "API 변경사항"
+        },
+        "ui": {
+          "description": "사용자 인터페이스 변경사항"
+        },
+        "auth": {
+          "description": "인증 및 권한 관련 변경사항"
+        },
+        "db": {
+          "description": "데이터베이스 관련 변경사항"
+        },
+        "test": {
+          "description": "테스트 관련 변경사항"
+        },
+        "docs": {
+          "description": "문서 관련 변경사항"
+        },
+        "style": {
+          "description": "코드 스타일 및 포맷팅"
+        },
+        "components": {
+          "description": "컴포넌트 변경사항"
+        },
+        "utils": {
+          "description": "유틸리티 변경사항"
+        },
+        "types": {
+          "description": "타입 정의 변경사항"
+        },
+        "hooks": {
+          "description": "훅 변경사항"
+        },
+        "store": {
+          "description": "상태 관리 변경사항"
+        },
+        "lib": {
+          "description": "내부 라이브러리 변경사항"
+        },
+        "ci": {
+          "description": "CI 관련 변경사항"
+        },
+        "docker": {
+          "description": "Docker 관련 변경사항"
+        },
+        "k8s": {
+          "description": "쿠버네티스 관련 변경사항"
+        },
+        "i18n": {
+          "description": "국제화/현지화 변경사항"
+        },
+        "security": {
+          "description": "보안 관련 변경사항"
+        },
+        "perf": {
+          "description": "성능 최적화 변경사항"
+        },
+        "release": {
+          "description": "릴리즈 및 버전 관련 변경사항"
+        },
+        "chore": {
+          "description": "기타 유지보수 작업"
+        }
+      }
+    },
+    "build": {
+      "description": "빌드 시스템 또는 외부 종속성에 영향을 미치는 변경사항 (예: gulp, broccoli, npm)",
+      "scopes": {
+        "npm": {
+          "description": "npm 관련 변경사항"
+        },
+        "gulp": {
+          "description": "gulp 관련 변경사항"
+        },
+        "broccoli": {
+          "description": "broccoli 관련 변경사항"
+        }
+      }
+    },
+    "chore": {
+      "description": "사용자에게 보이지 않는 유지보수 작업",
+      "scopes": {
+        "core": {
+          "description": "프로젝트 핵심 기능"
+        },
+        "deps": {
+          "description": "종속성 변경"
+        },
+        "config": {
+          "description": "구성 파일 및 환경 설정"
+        },
+        "build": {
+          "description": "빌드 관련 변경사항"
+        },
+        "api": {
+          "description": "API 변경사항"
+        },
+        "ui": {
+          "description": "사용자 인터페이스 변경사항"
+        },
+        "auth": {
+          "description": "인증 및 권한 관련 변경사항"
+        },
+        "db": {
+          "description": "데이터베이스 관련 변경사항"
+        },
+        "test": {
+          "description": "테스트 관련 변경사항"
+        },
+        "docs": {
+          "description": "문서 관련 변경사항"
+        },
+        "style": {
+          "description": "코드 스타일 및 포맷팅"
+        },
+        "components": {
+          "description": "컴포넌트 변경사항"
+        },
+        "utils": {
+          "description": "유틸리티 변경사항"
+        },
+        "types": {
+          "description": "타입 정의 변경사항"
+        },
+        "hooks": {
+          "description": "훅 변경사항"
+        },
+        "store": {
+          "description": "상태 관리 변경사항"
+        },
+        "lib": {
+          "description": "내부 라이브러리 변경사항"
+        },
+        "ci": {
+          "description": "CI 관련 변경사항"
+        },
+        "docker": {
+          "description": "Docker 관련 변경사항"
+        },
+        "k8s": {
+          "description": "쿠버네티스 관련 변경사항"
+        },
+        "i18n": {
+          "description": "국제화/현지화 변경사항"
+        },
+        "security": {
+          "description": "보안 관련 변경사항"
+        },
+        "perf": {
+          "description": "성능 최적화 변경사항"
+        },
+        "release": {
+          "description": "릴리즈 및 버전 관련 변경사항"
+        },
+        "chore": {
+          "description": "기타 유지보수 작업"
+        }
+      }
+    },
+    "style": {
+      "description": "코드 로직에 영향을 주지 않는 포맷팅, 공백, 세미콜론 등 스타일 변경",
+      "scopes": {
+        "core": {
+          "description": "프로젝트 핵심 기능"
+        },
+        "deps": {
+          "description": "종속성 변경"
+        },
+        "config": {
+          "description": "구성 파일 및 환경 설정"
+        },
+        "build": {
+          "description": "빌드 관련 변경사항"
+        },
+        "api": {
+          "description": "API 변경사항"
+        },
+        "ui": {
+          "description": "사용자 인터페이스 변경사항"
+        },
+        "auth": {
+          "description": "인증 및 권한 관련 변경사항"
+        },
+        "db": {
+          "description": "데이터베이스 관련 변경사항"
+        },
+        "test": {
+          "description": "테스트 관련 변경사항"
+        },
+        "docs": {
+          "description": "문서 관련 변경사항"
+        },
+        "style": {
+          "description": "코드 스타일 및 포맷팅"
+        },
+        "components": {
+          "description": "컴포넌트 변경사항"
+        },
+        "utils": {
+          "description": "유틸리티 변경사항"
+        },
+        "types": {
+          "description": "타입 정의 변경사항"
+        },
+        "hooks": {
+          "description": "훅 변경사항"
+        },
+        "store": {
+          "description": "상태 관리 변경사항"
+        },
+        "lib": {
+          "description": "내부 라이브러리 변경사항"
+        },
+        "ci": {
+          "description": "CI 관련 변경사항"
+        },
+        "docker": {
+          "description": "Docker 관련 변경사항"
+        },
+        "k8s": {
+          "description": "쿠버네티스 관련 변경사항"
+        },
+        "i18n": {
+          "description": "국제화/현지화 변경사항"
+        },
+        "security": {
+          "description": "보안 관련 변경사항"
+        },
+        "perf": {
+          "description": "성능 최적화 변경사항"
+        },
+        "release": {
+          "description": "릴리즈 및 버전 관련 변경사항"
+        },
+        "chore": {
+          "description": "기타 유지보수 작업"
+        }
+      }
+    },
+    "test": {
+      "description": "누락된 테스트를 추가하거나 기존 테스트를 수정하는 변경사항",
+      "scopes": {
+        "core": {
+          "description": "프로젝트 핵심 기능"
+        },
+        "deps": {
+          "description": "종속성 변경"
+        },
+        "config": {
+          "description": "구성 파일 및 환경 설정"
+        },
+        "build": {
+          "description": "빌드 관련 변경사항"
+        },
+        "api": {
+          "description": "API 변경사항"
+        },
+        "ui": {
+          "description": "사용자 인터페이스 변경사항"
+        },
+        "auth": {
+          "description": "인증 및 권한 관련 변경사항"
+        },
+        "db": {
+          "description": "데이터베이스 관련 변경사항"
+        },
+        "test": {
+          "description": "테스트 관련 변경사항"
+        },
+        "docs": {
+          "description": "문서 관련 변경사항"
+        },
+        "style": {
+          "description": "코드 스타일 및 포맷팅"
+        },
+        "components": {
+          "description": "컴포넌트 변경사항"
+        },
+        "utils": {
+          "description": "유틸리티 변경사항"
+        },
+        "types": {
+          "description": "타입 정의 변경사항"
+        },
+        "hooks": {
+          "description": "훅 변경사항"
+        },
+        "store": {
+          "description": "상태 관리 변경사항"
+        },
+        "lib": {
+          "description": "내부 라이브러리 변경사항"
+        },
+        "ci": {
+          "description": "CI 관련 변경사항"
+        },
+        "docker": {
+          "description": "Docker 관련 변경사항"
+        },
+        "k8s": {
+          "description": "쿠버네티스 관련 변경사항"
+        },
+        "i18n": {
+          "description": "국제화/현지화 변경사항"
+        },
+        "security": {
+          "description": "보안 관련 변경사항"
+        },
+        "perf": {
+          "description": "성능 최적화 변경사항"
+        },
+        "release": {
+          "description": "릴리즈 및 버전 관련 변경사항"
+        },
+        "chore": {
+          "description": "기타 유지보수 작업"
+        }
+      }
+    },
+    "docs": {
+      "description": "문서에 영향을 미치는 변경사항",
+      "scopes": {
+        "core": {
+          "description": "프로젝트 핵심 기능"
+        },
+        "deps": {
+          "description": "종속성 변경"
+        },
+        "config": {
+          "description": "구성 파일 및 환경 설정"
+        },
+        "build": {
+          "description": "빌드 관련 변경사항"
+        },
+        "api": {
+          "description": "API 변경사항"
+        },
+        "ui": {
+          "description": "사용자 인터페이스 변경사항"
+        },
+        "auth": {
+          "description": "인증 및 권한 관련 변경사항"
+        },
+        "db": {
+          "description": "데이터베이스 관련 변경사항"
+        },
+        "test": {
+          "description": "테스트 관련 변경사항"
+        },
+        "docs": {
+          "description": "문서 관련 변경사항"
+        },
+        "style": {
+          "description": "코드 스타일 및 포맷팅"
+        },
+        "components": {
+          "description": "컴포넌트 변경사항"
+        },
+        "utils": {
+          "description": "유틸리티 변경사항"
+        },
+        "types": {
+          "description": "타입 정의 변경사항"
+        },
+        "hooks": {
+          "description": "훅 변경사항"
+        },
+        "store": {
+          "description": "상태 관리 변경사항"
+        },
+        "lib": {
+          "description": "내부 라이브러리 변경사항"
+        },
+        "ci": {
+          "description": "CI 관련 변경사항"
+        },
+        "docker": {
+          "description": "Docker 관련 변경사항"
+        },
+        "k8s": {
+          "description": "쿠버네티스 관련 변경사항"
+        },
+        "i18n": {
+          "description": "국제화/현지화 변경사항"
+        },
+        "security": {
+          "description": "보안 관련 변경사항"
+        },
+        "perf": {
+          "description": "성능 최적화 변경사항"
+        },
+        "release": {
+          "description": "릴리즈 및 버전 관련 변경사항"
+        },
+        "chore": {
+          "description": "기타 유지보수 작업"
+        }
+      }
+    },
+    "perf": {
+      "description": "성능을 개선하는 변경사항",
+      "scopes": {
+        "core": {
+          "description": "프로젝트 핵심 기능"
+        },
+        "deps": {
+          "description": "종속성 변경"
+        },
+        "config": {
+          "description": "구성 파일 및 환경 설정"
+        },
+        "build": {
+          "description": "빌드 관련 변경사항"
+        },
+        "api": {
+          "description": "API 변경사항"
+        },
+        "ui": {
+          "description": "사용자 인터페이스 변경사항"
+        },
+        "auth": {
+          "description": "인증 및 권한 관련 변경사항"
+        },
+        "db": {
+          "description": "데이터베이스 관련 변경사항"
+        },
+        "test": {
+          "description": "테스트 관련 변경사항"
+        },
+        "docs": {
+          "description": "문서 관련 변경사항"
+        },
+        "style": {
+          "description": "코드 스타일 및 포맷팅"
+        },
+        "components": {
+          "description": "컴포넌트 변경사항"
+        },
+        "utils": {
+          "description": "유틸리티 변경사항"
+        },
+        "types": {
+          "description": "타입 정의 변경사항"
+        },
+        "hooks": {
+          "description": "훅 변경사항"
+        },
+        "store": {
+          "description": "상태 관리 변경사항"
+        },
+        "lib": {
+          "description": "내부 라이브러리 변경사항"
+        },
+        "ci": {
+          "description": "CI 관련 변경사항"
+        },
+        "docker": {
+          "description": "Docker 관련 변경사항"
+        },
+        "k8s": {
+          "description": "쿠버네티스 관련 변경사항"
+        },
+        "i18n": {
+          "description": "국제화/현지화 변경사항"
+        },
+        "security": {
+          "description": "보안 관련 변경사항"
+        },
+        "perf": {
+          "description": "성능 최적화 변경사항"
+        },
+        "release": {
+          "description": "릴리즈 및 버전 관련 변경사항"
+        },
+        "chore": {
+          "description": "기타 유지보수 작업"
+        }
+      }
+    },
+    "ci": {
+      "description": "CI 구성 파일 및 스크립트에 영향을 미치는 변경사항",
+      "scopes": {
+        "core": {
+          "description": "프로젝트 핵심 기능"
+        },
+        "deps": {
+          "description": "종속성 변경"
+        },
+        "config": {
+          "description": "구성 파일 및 환경 설정"
+        },
+        "build": {
+          "description": "빌드 관련 변경사항"
+        },
+        "api": {
+          "description": "API 변경사항"
+        },
+        "ui": {
+          "description": "사용자 인터페이스 변경사항"
+        },
+        "auth": {
+          "description": "인증 및 권한 관련 변경사항"
+        },
+        "db": {
+          "description": "데이터베이스 관련 변경사항"
+        },
+        "test": {
+          "description": "테스트 관련 변경사항"
+        },
+        "docs": {
+          "description": "문서 관련 변경사항"
+        },
+        "style": {
+          "description": "코드 스타일 및 포맷팅"
+        },
+        "components": {
+          "description": "컴포넌트 변경사항"
+        },
+        "utils": {
+          "description": "유틸리티 변경사항"
+        },
+        "types": {
+          "description": "타입 정의 변경사항"
+        },
+        "hooks": {
+          "description": "훅 변경사항"
+        },
+        "store": {
+          "description": "상태 관리 변경사항"
+        },
+        "lib": {
+          "description": "내부 라이브러리 변경사항"
+        },
+        "ci": {
+          "description": "CI 관련 변경사항"
+        },
+        "docker": {
+          "description": "Docker 관련 변경사항"
+        },
+        "k8s": {
+          "description": "쿠버네티스 관련 변경사항"
+        },
+        "i18n": {
+          "description": "국제화/현지화 변경사항"
+        },
+        "security": {
+          "description": "보안 관련 변경사항"
+        },
+        "perf": {
+          "description": "성능 최적화 변경사항"
+        },
+        "release": {
+          "description": "릴리즈 및 버전 관련 변경사항"
+        },
+        "chore": {
+          "description": "기타 유지보수 작업"
+        }
+      }
+    },
+    "revert": {
+      "description": "이전 커밋을 되돌리는 변경사항",
+      "scopes": {
+        "core": {
+          "description": "프로젝트 핵심 기능"
+        },
+        "deps": {
+          "description": "종속성 변경"
+        },
+        "config": {
+          "description": "구성 파일 및 환경 설정"
+        },
+        "build": {
+          "description": "빌드 관련 변경사항"
+        },
+        "api": {
+          "description": "API 변경사항"
+        },
+        "ui": {
+          "description": "사용자 인터페이스 변경사항"
+        },
+        "auth": {
+          "description": "인증 및 권한 관련 변경사항"
+        },
+        "db": {
+          "description": "데이터베이스 관련 변경사항"
+        },
+        "test": {
+          "description": "테스트 관련 변경사항"
+        },
+        "docs": {
+          "description": "문서 관련 변경사항"
+        },
+        "style": {
+          "description": "코드 스타일 및 포맷팅"
+        },
+        "components": {
+          "description": "컴포넌트 변경사항"
+        },
+        "utils": {
+          "description": "유틸리티 변경사항"
+        },
+        "types": {
+          "description": "타입 정의 변경사항"
+        },
+        "hooks": {
+          "description": "훅 변경사항"
+        },
+        "store": {
+          "description": "상태 관리 변경사항"
+        },
+        "lib": {
+          "description": "내부 라이브러리 변경사항"
+        },
+        "ci": {
+          "description": "CI 관련 변경사항"
+        },
+        "docker": {
+          "description": "Docker 관련 변경사항"
+        },
+        "k8s": {
+          "description": "쿠버네티스 관련 변경사항"
+        },
+        "i18n": {
+          "description": "국제화/현지화 변경사항"
+        },
+        "security": {
+          "description": "보안 관련 변경사항"
+        },
+        "perf": {
+          "description": "성능 최적화 변경사항"
+        },
+        "release": {
+          "description": "릴리즈 및 버전 관련 변경사항"
+        },
+        "chore": {
+          "description": "기타 유지보수 작업"
+        }
+      }
+    }
+  },
+  "footerTypes": [
+    {
+      "name": "BREAKING-CHANGE",
+      "description": "커밋이 호환되지 않는 API 변경을 도입함"
+    },
+    {
+      "name": "Closes",
+      "description": "커밋이 이슈 또는 풀 리퀘스트를 닫음"
+    },
+    {
+      "name": "Implements",
+      "description": "커밋이 기능을 구현함"
+    },
+    {
+      "name": "Author",
+      "description": "커밋의 작성자"
+    },
+    {
+      "name": "Co-authored-by",
+      "description": "지정된 사람이 커밋 변경사항을 공동 작성함"
+    },
+    {
+      "name": "Signed-off-by",
+      "description": "서명자가 프로젝트의 라이선스 하에 작업을 제출할 권리가 있음을 인증"
+    },
+    {
+      "name": "Acked-by",
+      "description": "지정된 사람이 커밋 변경사항을 승인함"
+    },
+    {
+      "name": "Reviewed-by",
+      "description": "지정된 사람이 커밋 변경사항을 검토함"
+    },
+    {
+      "name": "Tested-by",
+      "description": "지정된 사람이 커밋 변경사항을 테스트함"
+    },
+    {
+      "name": "Refs",
+      "description": "커밋이 다른 커밋을 참조함 (여러 해시 ID의 경우 쉼표로 구분)"
+    }
+  ]
+}
